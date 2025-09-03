@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url('https://source.unsplash.com/random/1920x1080/?music');
+    background-size: 400% 400%, cover;
+    background-position: 0% 50%, center;
+    animation: gradientShift 15s ease infinite;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1000px;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    height: 80%;
+    margin: 2rem auto;
+    padding: 2rem;
+    transform-style: preserve-3d;
+}
+
+.logout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.logout-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.title {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    border: rgb(0 147 255);
+    text-shadow: 2px 2px 4px rgb(0 147 255);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.card {
+    background: rgb(255 255 255 / 0%);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgb(0 147 255);
+    border: 1px solid rgb(0 0 0 / 18%);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+}
+
+#urlInput {
+    width: 90%;
+    height: 2vh;
+    padding: 1rem;
+    border: none;
+    margin: 1rem auto;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background: rgb(108, 213, 255);
+    color: black;
+    outline: none;
+}
+#urlInput::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.download-btn {
+    background: linear-gradient(45deg, rgb(0 147 255));
+    border: none;
+    width: 90%;
+    height: 7vh;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.status {
+    margin-top: 1rem;
+    color: white;
+    font-size: 1.1rem;
+}

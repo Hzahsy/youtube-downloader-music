@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Audio Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">YouTube Audio Downloader</h1>
+        <div class="logout">
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+        <div class="card">
+            <form id="downloadForm">
+                <input type="url" id="urlInput" placeholder="Enter YouTube URL" required>
+                <button type="submit" class="download-btn">Download Audio</button>
+            </form>
+            <div id="status" class="status"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
